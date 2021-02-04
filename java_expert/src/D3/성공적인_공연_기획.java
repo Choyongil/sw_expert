@@ -1,6 +1,6 @@
 package D3;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class 성공적인_공연_기획 {
