@@ -21,7 +21,6 @@ public class 카드2 {
 			queue.offer(i);
 		}
 		
-		int q;
 		while(queue.size() != 1) {
 			queue.poll();
 			queue.offer(queue.poll());
