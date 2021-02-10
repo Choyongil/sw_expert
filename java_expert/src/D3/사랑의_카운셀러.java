@@ -4,14 +4,15 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class 사랑의_카운셀러 {
 	
 	static ArrayList<long[]> arr;
-	static int[] list;
+	static int[] numbers;
+	static int[] input;
 	static int n;
+	static int R;
 	static boolean[] isSelected;
 	static long ans;
 	static long X;
@@ -27,6 +28,8 @@ public class 사랑의_카운셀러 {
 		
 		for(int tc = 1 ; tc <= T ; tc++) {
 			sb.append("#" + tc + " ");
+			X = 0;
+			Y = 0;
 			
 			n = Integer.parseInt(br.readLine());
 			arr = new ArrayList<long[]>();
@@ -41,16 +44,17 @@ public class 사랑의_카운셀러 {
 				Y += tmp[1];
 				arr.add(tmp);		
 			}
-			list = new int[n / 2];
-			ans = Long.MAX_VALUE;
 			
-			if(list.length == 1) {
-				long sumx = arr.get(0)[0] - arr.get(1)[0];
-				long sumy = arr.get(0)[1] - arr.get(1)[1];
-
-				ans = Math.min(ans, sumx*sumx + sumy*sumy);
+			input = new int[n];
+			for(int i = 0 ; i < n ; i++) {
+				input[i] = i;
 			}
-			else powerset(0, 0);
+			numbers = new int[n / 2];
+			R = n / 2;
+			ans = Long.MAX_VALUE;
+
+			powerset(0, 0);
+			
 			sb.append(ans);
 			System.out.println(sb);
 			sb.setLength(0);
@@ -59,45 +63,23 @@ public class 사랑의_카운셀러 {
 	
 	public static void powerset(int cnt, int idx) {
 		
-		if( cnt == n / 2) {
-			System.out.println(Arrays.toString(list));
+		if ( cnt == R ) {
+			
 			long sumx = 0;
 			long sumy = 0;
 			
-			for(int i : list) {
-				sumx += arr.get(i)[0];
-				sumy += arr.get(i)[1];
+			for(int a : numbers) {
+				sumx += arr.get(a)[0];
+				sumy += arr.get(a)[1];
 			}
-			
-			long x = sumx - (X - sumx);
-			long y = sumy - (Y - sumy);
-
-			ans = Math.min(ans, x*x + y*y);
+			ans = Math.min(ans, (sumx - (X - sumx))*(sumx - (X - sumx)) + (sumy - (Y - sumy)) * (sumy - (Y - sumy))); 
 			
 			return;
 		}
-		
-		for(int i = 0 ; i < 1; i++) {
-			if (isSelected[i] == true) continue;
-			
-			isSelected[i] = true;
-			list[cnt++] = i;
-			
-			int j = -1;
-			for(j = i + 1 ; j < n ; j++) {
-				if( isSelected[j] == true) continue;
-				
-				isSelected[j] = true;
-				list[cnt] = j;
-				cnt += 1;
-				powerset(cnt, j);
-				isSelected[j] = false;
-				cnt--;
-			}
-			cnt--;
-			isSelected[i] = false;
+		for( int i = idx ; i < n ; i++) {
+			numbers[cnt] = input[i];
+			powerset(cnt + 1, i + 1);
 		}
-		
 		
 	}
 }
