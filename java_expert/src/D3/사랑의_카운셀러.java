@@ -13,7 +13,6 @@ public class 사랑의_카운셀러 {
 	static int[] input;
 	static int n;
 	static int R;
-	static boolean[] isSelected;
 	static long ans;
 	static long X;
 	static long Y;
@@ -33,7 +32,6 @@ public class 사랑의_카운셀러 {
 			
 			n = Integer.parseInt(br.readLine());
 			arr = new ArrayList<long[]>();
-			isSelected = new boolean[n];
 			
 			for(int i = 0 ; i < n ; i++) {
 				long[] tmp = new long[2];
