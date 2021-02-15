@@ -33,7 +33,7 @@ public class N과_M9 {
 		Arrays.sort(input);
 		isSelected = new boolean[n];
 		sb = new StringBuilder();
-		func(0);
+		func(0, 0);
 		System.out.println(sb);
 	}
 	
@@ -44,10 +44,9 @@ public class N과_M9 {
 		return true;
 	}
 	
-	public static void func(int cnt) {
+	public static void func(int cnt, int idx) {
 		
 		if (cnt == m) {
-			System.out.println(Arrays.toString(numbers) + " // " + Arrays.toString(tmp_numbers));
 			if(check(tmp_numbers,numbers)) {
 				return;
 			}
@@ -64,12 +63,12 @@ public class N과_M9 {
 			}
 		}
 		int tmp_num = -1;
-		for(int i = 0 ; i < n ; i++) {
+		for(int i = idx ; i < n ; i++) {
 			if(isSelected[i] || tmp_num == input[i]) continue;
 			tmp_num = input[i];
 			isSelected[i] = true;
 			numbers[cnt] = input[i];
-			func(cnt + 1);
+			func(cnt + 1, i + 1);
 			isSelected[i] = false;
 		}
 	}

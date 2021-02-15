@@ -6,11 +6,12 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class N과_M7 {
+public class N과_M12 {
 	
 	static int n;
 	static int m;
 	static int[] numbers;
+	static int[] tmp_numbers;
 	static int[] input;
 	static StringBuilder sb;
 	
@@ -21,6 +22,7 @@ public class N과_M7 {
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		numbers = new int[m];
+		tmp_numbers = new int[m];
 		input = new int[n];
 		
 		st = new StringTokenizer(br.readLine(), " ");
@@ -29,23 +31,41 @@ public class N과_M7 {
 		}
 		Arrays.sort(input);
 		sb = new StringBuilder();
-		func(0);
+		func(0, 0);
 		System.out.println(sb);
 	}
 	
-	public static void func(int cnt) {
-		if (cnt == m) {
-			for(int i : numbers) {
-				sb.append(i + " ");
-			}
-			sb.setLength(sb.length() - 1);
-			sb.append("\n");
-			return;
+	public static boolean check(int[] a, int[] b) {
+		for(int i = 0 ; i < m ; i++) {
+			if(a[i] != b[i]) return false;
 		}
+		return true;
+	}
+	
+	public static void func(int cnt, int idx) {
 		
-		for(int i = 0 ; i < n ; i++) {
+		if (cnt == m) {
+			if(check(tmp_numbers,numbers)) {
+				return;
+			}
+			else {
+				for(int i : numbers) {
+					sb.append(i + " ");
+				}
+				sb.setLength(sb.length() - 1);
+				sb.append("\n");
+				for(int i = 0 ; i < m ; i++) {
+					tmp_numbers[i] = numbers[i];
+				}
+				return;
+			}
+		}
+		int tmp_num = -1;
+		for(int i = idx ; i < n ; i++) {
+			if(tmp_num == input[i]) continue;
+			tmp_num = input[i];
 			numbers[cnt] = input[i];
-			func(cnt + 1);
+			func(cnt + 1, i);
 		}
 	}
 }
