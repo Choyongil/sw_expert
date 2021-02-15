@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 public class comb {
 	
-	static int N = 4;
+	static int N = 5;
 	static int R = 3;
 	static int[] numbers = new int[R];
-	static int[] input = {1,2,3,4};
+	static int[] input = {1,2,3,4,5};
 	
 	public static void main(String[] args) {
 		combi(0,0);
