@@ -12,7 +12,6 @@ public class ㅁ123더하기 {
 		int n = Integer.parseInt(br.readLine());
 		
 		int[] ans = new int[10];
-		
 		ans[0] = 1;
 		ans[1] = 2;
 		ans[2] = 4;
