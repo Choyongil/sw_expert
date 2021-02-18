@@ -62,13 +62,14 @@ public class N과_M9 {
 				return;
 			}
 		}
+
 		int tmp_num = -1;
 		for(int i = idx ; i < n ; i++) {
 			if(isSelected[i] || tmp_num == input[i]) continue;
 			tmp_num = input[i];
 			isSelected[i] = true;
 			numbers[cnt] = input[i];
-			func(cnt + 1, i + 1);
+			func(cnt + 1, i + 1); 
 			isSelected[i] = false;
 		}
 	}
