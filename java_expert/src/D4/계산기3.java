@@ -63,15 +63,13 @@ public class 계산기3 {
 					int b = ans.pop();
 					int d;
 					if( c == '+' ) d = a + b;
-					else d = a*b;
+					else d = a * b;
 					ans.add(d);
 				}
 			}
-			
-			sb.append(ans.pop());
-			
-			System.out.println(sb);
-			sb.setLength(0);
+			sb.append(ans.pop() + "\n");
 		}
+		System.out.println(sb);
+		sb.setLength(0);
 	}
 }
