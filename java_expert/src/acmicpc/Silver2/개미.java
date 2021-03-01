@@ -1,4 +1,4 @@
-package acmicpc.Siver2;
+package acmicpc.Silver2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
