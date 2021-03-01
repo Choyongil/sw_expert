@@ -43,7 +43,6 @@ public class 사칙연산 {
 				else if(arr[i] == '*') arr2[i] = arr2[left[i]] * arr2[right[i]];
 				else if(arr[i] == '/') arr2[i] = arr2[left[i]] / arr2[right[i]];
 			}
-			
 			sb.append(arr2[1]).append("\n");
 		}
 		sb.setLength(sb.length() - 1);
