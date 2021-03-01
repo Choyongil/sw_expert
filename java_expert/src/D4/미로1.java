@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 미로2 {
+public class 미로1 {
 	
 	static char[][] arr;
 	static int strR, strC, ans;
@@ -20,16 +20,16 @@ public class 미로2 {
 			
 			br.readLine();
 			
-			arr = new char[100][100];
+			arr = new char[16][16];
 			
-			for(int i = 0 ; i < 100 ; i++) {
+			for(int i = 0 ; i < 16 ; i++) {
 				arr[i] = br.readLine().toCharArray();
 			}
 			strR = 0;
 			strC = 0;
 			ans = 0;
-			for(int i = 0 ; i < 100 ; i++) {
-				for(int j = 0 ; j < 100 ; j++) {
+			for(int i = 0 ; i < 16 ; i++) {
+				for(int j = 0 ; j < 16 ; j++) {
 					if (arr[i][j] == '2') {
 						strR = i;
 						strC = j;

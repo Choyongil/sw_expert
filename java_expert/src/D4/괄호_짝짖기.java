@@ -3,7 +3,6 @@ package D4;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -16,7 +15,7 @@ public class 괄호_짝짖기 {
 		
 		StringBuilder sb = new StringBuilder();
 		
-		for(int tc = 1 ; tc <= 1 ; tc++) {
+		for(int tc = 1 ; tc <= 10 ; tc++) {
 			
 			sb.append("#" + tc + " ");
 			
@@ -70,9 +69,9 @@ public class 괄호_짝짖기 {
 			}
 			int ans = flag == true && a.size() + b.size() + c.size() + d.size() == 0 ? 1 : 0;
 			
-			sb.append(ans);
-			System.out.println(sb);
-			sb.setLength(0);
+			sb.append(ans).append("\n");
 		}
+		sb.setLength(sb.length()-1);
+		System.out.println(sb);
 	}
 }
