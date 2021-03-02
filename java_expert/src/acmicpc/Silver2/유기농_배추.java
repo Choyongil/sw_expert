@@ -53,8 +53,6 @@ public class 유기농_배추 {
 			if(nr > n - 1|| nc > m - 1 || nr < 0 || nc < 0) continue;
 			if(arr[nr][nc] == 1) func(nr, nc);
 		}
-//		if(r < n - 1 && arr[r+1][c] == 1) func(r+1, c);
-//		if(c < m - 1 && arr[r][c+1] == 1) func(r, c+1);
 		return;
 	}
 }
