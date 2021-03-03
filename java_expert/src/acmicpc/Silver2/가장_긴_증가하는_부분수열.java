@@ -15,22 +15,27 @@ public class 가장_긴_증가하는_부분수열 {
 		
 		st = new StringTokenizer(br.readLine());
 		int[] arr = new int[n];
+		int[] dp = new int[n];
 		for(int i = 0 ; i < n ; i++) {
+			dp[i] = 1;
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		Arrays.sort(arr);
-		int a = 0;
-		int ans = 0;
-		for(int i = 1 ; i < n ; i++) {
-			if (arr[i] == 0) continue;
-			int day = arr[i] - arr[i-1];
-			ans += 1;
-			for(int j = i + 1 ; j < n ; j++) {
-				if((arr[j] - 1 ) % day == 0) {
-					arr[j] = 0;
+		int ans = 1;
+		for(int i = 0 ; i < n ; i++) {
+			int tmp = arr[i];
+			for(int j = 0 ; j < i ; j++) {
+				if(arr[j] < tmp) {
+					dp[i] = Math.max(dp[i], dp[j]+1);
 				}
 			}
+			ans = Math.max(ans, dp[i]);
 		}
+		System.out.println(ans);
+		
 	}
 }
+//9
+//10 20 10 30 20 50 10 10 10
+//3
+//10 10 10
