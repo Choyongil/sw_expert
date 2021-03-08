@@ -53,10 +53,10 @@ public class 사랑의_카운셀러 {
 
 			powerset(0, 0);
 			
-			sb.append(ans);
-			System.out.println(sb);
-			sb.setLength(0);
+			sb.append(ans).append("\n");
 		}
+		sb.setLength(sb.length()-1);
+		System.out.println(sb);
 	}
 	
 	public static void powerset(int cnt, int idx) {
