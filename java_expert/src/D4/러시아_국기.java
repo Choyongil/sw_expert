@@ -47,6 +47,7 @@ public class 러시아_국기 {
 		System.out.println(sb);
 	}
 	
+	//부분수열
 	public static void set(int cnt, int idx) {
 		
 		if(cnt == 3) {
