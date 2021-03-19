@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class MST1_KroskalTest {
+public class MST1_KruskalTest {
 	
 	static class Edge implements Comparable<Edge>{
 		int from,to,weight;
