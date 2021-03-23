@@ -8,8 +8,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-import week0315_0319.G1_AdjMatrixTest3.Node;
-
 /*
 7
 8
