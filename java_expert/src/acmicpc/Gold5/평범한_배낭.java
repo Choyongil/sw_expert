@@ -24,9 +24,9 @@ public class 평범한_배낭 {
 		int[][] arr = new int[n + 1][k + 1];
 		
 		for(int i = 1 ; i <= n ; i++) {
+			int cur_w = WV[i][0];
+			int cur_v = WV[i][1];
 			for(int w = 1 ; w <= k ; w++) {
-				int cur_w = WV[i][0];
-				int cur_v = WV[i][1];
 				
 				if( cur_w > w ) {
 					arr[i][w] = arr[i - 1][w];
