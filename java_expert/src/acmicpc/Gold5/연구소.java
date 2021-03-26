@@ -1,4 +1,4 @@
-package D5;
+package acmicpc.Gold5;
 
 import java.io.BufferedReader;
 import java.io.IOException;
