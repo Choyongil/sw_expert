@@ -25,6 +25,7 @@ public class 포도주_시식 {
 			System.out.println(arr[0] + arr[1]);
 			System.exit(0);
 		}
+		
 		dp[0] = arr[0];
 		if(n > 1) dp[1] = arr[0] + arr[1];
 		dp[2] = Math.max(dp[1], arr[2] + Math.max(arr[0], arr[1]));
