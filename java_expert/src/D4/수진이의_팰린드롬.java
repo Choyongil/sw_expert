@@ -15,7 +15,7 @@ public class 수진이의_팰린드롬 {
 		for(int tc = 1 ; tc <= T ; tc++) {
 			sb.append("#").append(tc).append(" ");
 			char[] arr = br.readLine().toCharArray();
-			
+
 			int[] num = new int[26];
 			for(char c : arr) {
 				num[c-'a']++;
