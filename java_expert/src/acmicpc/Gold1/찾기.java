@@ -42,7 +42,7 @@ public class 찾기 {
 
 /*
 ABC ABCDAB ABCDABCDABDE
-ABCDABD
+aabaaa
 ababaca
 */
 
