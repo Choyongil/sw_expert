@@ -26,6 +26,7 @@ public class 키_순서 {
 			int m = Integer.parseInt(br.readLine());
 			
 			arr = new int[n+1][n+1];
+			int[] check = new int[n+1];
 			
 			for(int i = 0 ; i < m ; i++) {
 				st = new StringTokenizer(br.readLine());
@@ -33,6 +34,7 @@ public class 키_순서 {
 				int e = Integer.parseInt(st.nextToken());
 				
 				arr[s][e] = 1;
+				check[e]++;
 			}
 			
 			int ans = 0;
