@@ -8,7 +8,6 @@ import java.util.StringTokenizer;
 public class 보호_필름 {
 
 	static int d, w, k, arr[][], arr2[][], ans, one[], zero[];
-	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
