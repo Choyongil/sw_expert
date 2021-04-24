@@ -17,7 +17,7 @@ public class 동전1 {
 		for(int i = 0 ; i < n ; i++) {
 			num[i] = sc.nextInt();
 			for(int j = num[i] ; j <= k ; j++) {
-				dp[j] += dp[j - num[i]];
+				dp[j] += dp[j - num[i]]; 
 			}
 		}
 		System.out.println(dp[k]);
