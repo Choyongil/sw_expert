@@ -79,7 +79,7 @@ public class 테트로미노 {
 					flag = false;
 					break out;
 				}
-				tmp += map[nr][nc]; 
+				tmp += map[nr][nc];
 			}
 			if(flag) ans = Math.max(ans, tmp);
 		}
