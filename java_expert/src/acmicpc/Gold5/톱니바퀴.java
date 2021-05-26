@@ -98,7 +98,6 @@ public class 톱니바퀴 {
 	}
 
 	private static void spin(int r, int d) {
-		// TODO Auto-generated method stub
 		if(d == 1) {
 			char tmp = gear[r][7];
 			for(int i = 7 ; i > 0 ; i--) {
