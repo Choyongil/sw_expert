@@ -47,6 +47,7 @@ public class 다리_만들기 {
 	
 	static int[] dr = {-1,1,0,0};
 	static int[] dc = {0,0,-1,1};
+	// 같은 지역별로 id 부여해주기
 	public static void go(int r, int c, int id) {
 		area[r][c] = id;
 		
@@ -60,6 +61,8 @@ public class 다리_만들기 {
 		}
 	}
 	
+	// 다른 id가 있으면 다리 만들기
+	// ans 값과 비교해서 ans 최신화
 	public static void build(int r, int c, int id) {
 		for(int i = 0 ; i < n ; i++) {
 			for(int j = 0 ; j < n ; j++) {
