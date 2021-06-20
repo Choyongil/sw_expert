@@ -14,17 +14,11 @@ public class 뱀 {
 		int r;
 		int c;
 		
-		@Override
-		public String toString() {
-			return "Point [r=" + r + ", c=" + c + "]";
-		}
-		
 		public Point(int r, int c) {
 			super();
 			this.r = r;
 			this.c = c;
 		}
-		
 	}
 	static class time{
 		int t;
@@ -33,10 +27,6 @@ public class 뱀 {
 			super();
 			this.t = t;
 			this.d = d;
-		}
-		@Override
-		public String toString() {
-			return "time [t=" + t + ", d=" + d + "]";
 		}
 	}
 	static List<Point> list;

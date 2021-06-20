@@ -50,6 +50,8 @@ public class 리모컨 {
 		System.out.println(pq.poll().cnt);
 	}
 	
+	// 1112 : 1111 + 1
+	// 고장나지 않은 버튼들의 조합으로 (n의 자릿수)와 같은 자리의 수들의 집
 	public static void go(int cnt, String x) {
 		
 		if(cnt == length) {
@@ -66,6 +68,8 @@ public class 리모컨 {
 		}
 	}
 	
+	// 1000 : 999 + 1
+	// 고장나지 않은 버튼들의 조합으로 (n의 자릿수 - 1)와 같은 자리의 수들의 집
 	public static void go2(int cnt, String x) {
 		if(cnt == length - 1) {
 			if( pq.peek().cnt > length - 1 + Math.abs(n - Integer.parseInt(x))) {
@@ -81,6 +85,7 @@ public class 리모컨 {
 		}
 	}
 
+	// 고장나지 않은 버튼들의 조합으로 (n의 자릿수 + 1)와 같은 자리의 수들의 집
 	public static void go3(int cnt, String x) {
 		
 		if(cnt == length + 1) {
