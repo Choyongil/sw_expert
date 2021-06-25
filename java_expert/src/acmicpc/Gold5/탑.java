@@ -10,11 +10,11 @@ public class 탑 {
 
 	static class Point{
 		int x;
-		int length;
-		public Point(int x, int length) {
+		int idx;
+		public Point(int x, int idx) {
 			super();
 			this.x = x;
-			this.length = length;
+			this.idx = idx;
 		}
 	}
 	public static void main(String[] args) throws IOException {
@@ -40,7 +40,7 @@ public class 탑 {
 					if(s.x >= x) {
 						stack.add(s);
 						stack.add(new Point(x, i));
-						sb.append(s.length + 1).append(" ");
+						sb.append(s.idx + 1).append(" ");
 						break;
 					}
 				}
