@@ -23,7 +23,6 @@ public class 가장_큰_정사각형 {
 			}
 		}
 		
-		
 		int Down = 0;
 		int Right = 0;
 		int DownRight = 0;
@@ -54,6 +53,7 @@ public class 가장_큰_정사각형 {
 //111110
 //011110
 //010000
+
 //5 5
 //11111
 //11111
