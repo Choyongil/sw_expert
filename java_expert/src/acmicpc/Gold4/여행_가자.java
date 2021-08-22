@@ -24,13 +24,13 @@ public class 여행_가자 {
 			for(int j = 1 ; j <= n ; j++) {
 				int x = Integer.parseInt(st.nextToken());
 				if(x == 1) {
-					if(findSet(i) != findSet(j))
-						union(i,j);
+					union(i,j);
 				}
 			}
 		}
 		
 		st = new StringTokenizer(br.readLine());
+		// group : 답이 YES 라면 모든 도시들의 parents 값
 		int group = -1, city;
 		String ans = "YES";
 		for(int i = 0 ; i < m ; i++) {
