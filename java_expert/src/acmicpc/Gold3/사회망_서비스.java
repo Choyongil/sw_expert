@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.StringTokenizer;
 
@@ -36,6 +37,8 @@ public class 사회망_서비스 {
 		
 		dfs(1, -1);
 		
+		System.out.println(Arrays.toString(dist[0]));
+		System.out.println(Arrays.toString(dist[1]));
 		System.out.println(Math.min(dist[0][1], dist[1][1]));
 	}
 	
